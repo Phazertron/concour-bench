@@ -1,0 +1,40 @@
+concur-bench - Concurrency Benchmark Tool
+==========================================
+
+Verbose mode (detailed per-worker output) [y/n]: n
+Array length (1000 - 2147483647): 1000000
+Number of processes (1 - 256) [detected 8 cores]: 4
+Number of threads (1 - 256) [detected 8 cores]: 4
+Random seed (0 for auto, or 1 - 4294967295): 314159
+Benchmark iterations (1 - 100) [default 5]: 5
+
+Populating array (1000000 elements): ++++++++++
+
+Running single-threaded benchmark (5 iterations)...
+Running multi-process benchmark (4 processes, 5 iterations)...
+Running multi-threaded benchmark (4 threads, 5 iterations)...
+
+=== concur-bench Results ===
+
+System: Linux 6.1.0 x86_64, 8 logical cores
+Run:    20260209_143022
+
+Configuration:
+  Array length:    1000000
+  Processes:       4
+  Threads:         4
+  Seed:            314159
+  Iterations:      5
+  Verbose:         no
+
++-----------+---------+------------+------------+------------+------------+---------+
+| Mode      | Workers | Min (s)    | Mean (s)   | Max (s)    | Stddev (s) | Speedup |
++-----------+---------+------------+------------+------------+------------+---------+
+| single    |       1 |   0.003201 |   0.003421 |   0.003712 |   0.000201 |   1.00x |
+| process   |       4 |   0.001102 |   0.001205 |   0.001350 |   0.000098 |   2.84x |
+| thread    |       4 |   0.001023 |   0.001150 |   0.001298 |   0.000112 |   2.97x |
++-----------+---------+------------+------------+------------+------------+---------+
+
+Correctness: PASS (all modes computed sum = 50498721)
+
+Results saved to: results/run_20260209_143022/

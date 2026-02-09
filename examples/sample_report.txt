@@ -1,0 +1,30 @@
+concur-bench Report
+====================
+
+Timestamp: 20260209_143022
+System:    Linux 6.1.0 x86_64, 8 logical cores
+
+Configuration:
+  Array length:    1000000
+  Processes:       4
+  Threads:         4
+  Seed:            314159
+  Iterations:      5
+  Verbose:         no
+
+Results:
+
++-----------+---------+------------+------------+------------+------------+---------+
+| Mode      | Workers | Min (s)    | Mean (s)   | Max (s)    | Stddev (s) | Speedup |
++-----------+---------+------------+------------+------------+------------+---------+
+| single    |       1 |   0.003201 |   0.003421 |   0.003712 |   0.000201 |   1.00x |
+| process   |       4 |   0.001102 |   0.001205 |   0.001350 |   0.000098 |   2.84x |
+| thread    |       4 |   0.001023 |   0.001150 |   0.001298 |   0.000112 |   2.97x |
++-----------+---------+------------+------------+------------+------------+---------+
+
+Speedup Analysis:
+  Multi-process vs Single: 2.84x
+  Multi-thread  vs Single: 2.97x
+
+Correctness Verification:
+  PASS - All modes computed identical sum: 50498721

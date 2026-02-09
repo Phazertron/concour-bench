@@ -1,0 +1,45 @@
+# Build artifacts
+build/
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dylib
+*.dll
+*.lib
+*.exp
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile.cmake
+compile_commands.json
+
+# IDE and editor files
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+.idea/
+*.user
+*.suo
+*.ncb
+*.pdb
+*.idb
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Results directory (generated at runtime)
+results/run_*/
+
+# Debug files
+*.dSYM/
+core
+core.*
